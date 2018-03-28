@@ -3,6 +3,7 @@ require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome #ドライバ選択
 driver.navigate.to "https://tinder.com" #移動サイト指定
 firstWindowHandle = driver.window_handle
+#"https://tinder.com"のwindow handleを取得することであとで戻れるようにする
 sleep(5)
 
 driver.find_element(:xpath, '//*[@id="modal-manager"]/div/div/div[2]/div[1]/div[2]/button[1]/span/span').click
