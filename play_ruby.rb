@@ -9,6 +9,8 @@ require 'abbrev'
 require 'pp'
 #出力結果を自動で改行してくれる
 require 'timeout'
+require 'etc'
+require 'rubygems'
 
 ruby_data = {
   "num" => 1,
@@ -50,3 +52,16 @@ pp Abbrev.abbrev(["ruby"])
 #   end
 # }
 # ↑わざとtimeout関数でtimeoutエラーを出させる実装
+
+p Etc.getlogin
+#unixのログイン名を返す
+
+p Etc.confstr(Etc::CS_PATH)
+
+pp Etc.uname
+#unameメソッド とは　少なくとも :sysname, :nodename, :release, :version, :machine の 5 つのキーを持つ Hash を返す
+
+p Gem.dir
+#gemがインストールされているディレクトリを返す
+
+p Gem.path
