@@ -8,6 +8,7 @@ require 'abbrev'
 #与えられた文字列の短縮形を生成してくれる
 require 'pp'
 #出力結果を自動で改行してくれる
+require 'timeout'
 
 ruby_data = {
   "num" => 1,
@@ -41,3 +42,11 @@ prime_instance = Prime.instance
 p Prime.prime_division(12)
 
 pp Abbrev.abbrev(["ruby"])
+
+# i = 0
+# Timeout.timeout(0.00000001){
+#   while true do
+#     i += 1
+#   end
+# }
+# ↑わざとtimeout関数でtimeoutエラーを出させる実装
