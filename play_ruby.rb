@@ -65,3 +65,5 @@ p Gem.dir
 #gemがインストールされているディレクトリを返す
 
 p Gem.path
+
+p __FILE__
